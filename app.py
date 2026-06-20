@@ -11,6 +11,9 @@ import os
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
+from dotenv import load_dotenv
+load_dotenv()
+
 # ── Page Config ────────────────────────────────────────────────
 st.set_page_config(
     page_title="Resume Screening System",
