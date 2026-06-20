@@ -4,8 +4,9 @@ An AI-powered resume screening tool that analyzes resumes against a job descript
 
 Built as part of a task assignment for Eterosoft Technologies.
 
-## 🚀 Live Demo
-👉 [Try the app here](https://candidate-ranking-ai.streamlit.app/)
+## Live Demo
+
+[Try the app here](https://candidate-ranking-ai.streamlit.app/)
 
 ---
 
@@ -64,6 +65,7 @@ Create a `.env` file in the root folder:
 GROQ_API_KEY=your_groq_api_key_here
 
 Run the app:
+
 ```bash
 python -m streamlit run app.py
 ```
@@ -103,6 +105,6 @@ README.md           - Project documentation
 
 ## Author
 
-Manish Bhattarai  
-BIT Undergraduate, Itahari International College  
+Manish Bhattarai
+BIT Undergraduate, Itahari International College
 manishbhattarai2024@gmail.com
