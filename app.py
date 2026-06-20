@@ -255,6 +255,23 @@ if run_button:
             st.markdown("---")
             st.markdown(f"<h2 style='font-size:20px; font-weight:700'>Results — {len(results)} Candidate(s) Ranked</h2>", unsafe_allow_html=True)
 
+            # Recommended candidates highlight
+            recommended = [r for r in results if r["score"] >= 70]
+            if recommended:
+                st.markdown("<div class='section-title' style='color:#198754'>Recommended Candidates</div>", unsafe_allow_html=True)
+                for r in recommended:
+                    st.markdown(f"""
+                    <div style='background:#d1e7dd; border-left:4px solid #198754; 
+                    border-radius:6px; padding:12px 16px; margin-bottom:8px'>
+                        <strong>{r['name']}</strong> — {r['score']}% match &nbsp;|&nbsp; 
+                        Matched skills: {len(r['matched'])} &nbsp;|&nbsp; 
+                        Missing skills: {len(r['missing'])}
+                    </div>
+                    """, unsafe_allow_html=True)
+                st.markdown("---")
+            else:
+                st.info("No candidates scored above 70%. See full rankings below.")
+
             # ── Ranking Table ──────────────────────────────────
             table_data = []
             for rank, r in enumerate(results, 1):
